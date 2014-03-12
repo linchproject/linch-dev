@@ -4,7 +4,7 @@
 
     <groupId>com.linchproject</groupId>
     <artifactId>linch-dev</artifactId>
-    <version>0.1</version>
+    <version>0.2-SNAPSHOT</version>
 
     <build>
         <plugins>
