@@ -20,4 +20,23 @@
         </plugins>
     </build>
 
+    <scm>
+        <url>https://github.com/linchproject/linch-dev</url>
+        <connection>scm:git:git@github.com:linchproject/linch-dev.git</connection>
+        <developerConnection>scm:git:git@github.com:linchproject/linch-dev.git</developerConnection>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>linch-releases</id>
+            <name>Linch Releases Repository</name>
+            <url>${linch.repository}/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>linch-snapshots</id>
+            <name>Linch Snapshots Repository</name>
+            <url>${linch.repository}/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
