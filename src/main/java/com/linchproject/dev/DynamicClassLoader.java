@@ -98,9 +98,13 @@ public class DynamicClassLoader extends ClassLoader {
         File file = new File("src" + File.separator + "main" + File.separator + "resources", name);
 
         URL url;
-        try {
-            url = file.toURI().toURL();
-        } catch (MalformedURLException e) {
+        if (file.exists()) {
+            try {
+                url = file.toURI().toURL();
+            } catch (MalformedURLException e) {
+                url = super.getResource(name);
+            }
+        } else {
             url = super.getResource(name);
         }
         return url;
